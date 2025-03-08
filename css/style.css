@@ -9,13 +9,13 @@ html {
 }
 
 :root {
-    --bg-color: #0a192f;        /* Koyu lacivert arka plan */
-    --text-primary: #ccd6f6;    /* Açık gri başlık rengi */
-    --text-secondary: #8892b0;  /* Daha soluk gri metin rengi */
-    --accent-color: #64ffda;    /* Vurgu rengi */
+    --bg-color: #0a192f;        
+    --text-primary: #ccd6f6;    /* Light gray heading color */
+    --text-secondary: #8892b0;  /* Muted gray text color */
+    --accent-color: #64ffda;    
     --font-sans: 'Inter', sans-serif;
-    --sidebar-width: 30%;      /* Sidebar genişliği azaltıldı */
-    --content-padding: 80px;   /* Kenar boşlukları */
+    --sidebar-width: 30%;      
+    --content-padding: 80px;   
     --top-spacing: 120px;
 }
 
@@ -48,21 +48,21 @@ body {
 }
 
 .sidebar-content {
-    max-width: 400px;  /* İçerik genişliği sınırlandı */
+    max-width: 400px;  /* Limit content width */
     width: 100%;
 }
 
 .sidebar h1 {
-    font-size: 2.5rem;  /* Başlık boyutu küçültüldü */
+    font-size: 2.5rem;  /* Reduced heading size */
     font-weight: 450;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
     line-height: 1.1;
-    letter-spacing: -0.5px; /* Harf aralığı ayarlandı */
+    letter-spacing: -0.5px; /* Adjusted letter spacing */
 }
 
 .sidebar h2 {
-    font-size: 1.2rem;  /* Alt başlık boyutu küçültüldü */
+    font-size: 1.2rem;  /* Reduced subheading size */
     color: var(--text-primary);
     margin-bottom: 1rem;
     font-weight: 300;
@@ -72,7 +72,7 @@ body {
 .sidebar p {
     color: var(--text-secondary);
     margin-bottom: 2rem;
-    font-size: 1rem;  /* Paragraf metin boyutu küçültüldü */
+    font-size: 1rem;  /* Reduced paragraph text size */
     max-width: 540px;
     line-height: 1.5;
     font-weight: 100;
@@ -108,16 +108,16 @@ body {
     color: var(--accent-color);
 }
 
-/* Sosyal medya ikonları için stiller */
+/* Social media icon styles */
 .social-links {
     display: flex;
-    gap: 2rem; /* İkonlar arası boşluk */
+    gap: 2rem; /* Space between icons */
     align-self: flex-start; /* Sol hizalama */
 }
 
 .social-links a {
     color: var(--text-primary);
-    font-size: 1.7rem; /* Boyut küçültüldü */
+    font-size: 1.7rem; /* Reduced size */
     transition: color 0.3s ease;
 }
 
@@ -147,13 +147,13 @@ body {
 
 .main-content {
     flex: 1;
-    margin-left: calc(var(--sidebar-width) + 15%);
+    margin-left: calc(var(--sidebar-width) + 12%);
     padding-top: var(--top-spacing);
-    padding-left: 3rem;
+    padding-left: 3.55rem;
     padding-right: var(--content-padding);
     background-color: var(--bg-color);
     color: var(--text-secondary);
-    max-width: 1000px;  /* İçerik maksimum genişliği azaltıldı */
+    max-width: 1000px;  /* Reduced maximum content width */
 }
 
 .section {
@@ -171,7 +171,7 @@ body {
 }
 
 .about-section {
-    padding-top: 0; /* İlk section için padding-top'u kaldır */
+    padding-top: 0; /* Remove padding-top for first section */
 }
 
 .about-content {
@@ -200,7 +200,7 @@ body {
 
 .skills-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
+    grid-template-columns: repeat(3, minmax(140px, 200px));
     gap: 0.5rem 1rem;
     padding: 0;
     margin: 1.5rem 0;
@@ -223,7 +223,7 @@ body {
 
 /* Experience section styles */
 .experience-section {
-    padding-top: var(--top-spacing); /* Diğer section'lar için padding ekle */
+    padding-top: 80; /* Add padding for other sections */
 }
 
 .experience-content {
@@ -276,7 +276,7 @@ body {
 
 /* Projects section styles */
 .projects-section {
-    padding-top: var(--top-spacing); /* Diğer section'lar için padding ekle */
+    padding-top: 80; /* Add padding for other sections */
 }
 
 .projects-grid {
@@ -477,5 +477,52 @@ body {
     .footer-social a {
         font-size: 1.2rem;
     }
+}
+
+.project-card {
+    display: block;
+    text-decoration: none;
+    background-color: rgba(100, 255, 218, 0.02);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-tech-stack {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.project-tech-stack span {
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    background-color: rgba(100, 255, 218, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(100, 255, 218, 0.05);
+    border-color: var(--accent-color);
 }
   
