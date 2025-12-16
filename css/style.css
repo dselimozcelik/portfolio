@@ -5,17 +5,20 @@
 }
 
 html {
-    scroll-behavior: smooth;  /* Smooth scrolling for the entire page */
+    scroll-behavior: smooth;
+    /* Smooth scrolling for the entire page */
 }
 
 :root {
-    --bg-color: #0a192f;        
-    --text-primary: #ccd6f6;    /* Light gray heading color */
-    --text-secondary: #8892b0;  /* Muted gray text color */
-    --accent-color: #64ffda;    
+    --bg-color: #0a192f;
+    --text-primary: #ccd6f6;
+    /* Light gray heading color */
+    --text-secondary: #8892b0;
+    /* Muted gray text color */
+    --accent-color: #64ffda;
     --font-sans: 'Inter', sans-serif;
-    --sidebar-width: 30%;      
-    --content-padding: 80px;   
+    --sidebar-width: 30%;
+    --content-padding: 80px;
     --top-spacing: 120px;
 }
 
@@ -44,25 +47,30 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;  /* Sol hizalama */
+    align-items: flex-start;
+    /* Sol hizalama */
 }
 
 .sidebar-content {
-    max-width: 400px;  /* Limit content width */
+    max-width: 400px;
+    /* Limit content width */
     width: 100%;
 }
 
 .sidebar h1 {
-    font-size: 2.5rem;  /* Reduced heading size */
+    font-size: 2.5rem;
+    /* Reduced heading size */
     font-weight: 450;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
     line-height: 1.1;
-    letter-spacing: -0.5px; /* Adjusted letter spacing */
+    letter-spacing: -0.5px;
+    /* Adjusted letter spacing */
 }
 
 .sidebar h2 {
-    font-size: 1.2rem;  /* Reduced subheading size */
+    font-size: 1.2rem;
+    /* Reduced subheading size */
     color: var(--text-primary);
     margin-bottom: 1rem;
     font-weight: 300;
@@ -72,7 +80,8 @@ body {
 .sidebar p {
     color: var(--text-secondary);
     margin-bottom: 2rem;
-    font-size: 1rem;  /* Reduced paragraph text size */
+    font-size: 1rem;
+    /* Reduced paragraph text size */
     max-width: 540px;
     line-height: 1.5;
     font-weight: 100;
@@ -111,13 +120,16 @@ body {
 /* Social media icon styles */
 .social-links {
     display: flex;
-    gap: 2rem; /* Space between icons */
-    align-self: flex-start; /* Sol hizalama */
+    gap: 2rem;
+    /* Space between icons */
+    align-self: flex-start;
+    /* Sol hizalama */
 }
 
 .social-links a {
     color: var(--text-primary);
-    font-size: 1.7rem; /* Reduced size */
+    font-size: 1.7rem;
+    /* Reduced size */
     transition: color 0.3s ease;
 }
 
@@ -147,13 +159,14 @@ body {
 
 .main-content {
     flex: 1;
-    margin-left: calc(var(--sidebar-width) + 12%);
+    margin-left: calc(var(--sidebar-width) + 15%);
     padding-top: var(--top-spacing);
     padding-left: 3.55rem;
     padding-right: var(--content-padding);
     background-color: var(--bg-color);
     color: var(--text-secondary);
-    max-width: 1000px;  /* Reduced maximum content width */
+    max-width: 1000px;
+    /* Reduced maximum content width */
 }
 
 .section {
@@ -171,7 +184,8 @@ body {
 }
 
 .about-section {
-    padding-top: 0; /* Remove padding-top for first section */
+    padding-top: 0;
+    /* Remove padding-top for first section */
 }
 
 .about-content {
@@ -223,7 +237,8 @@ body {
 
 /* Experience section styles */
 .experience-section {
-    padding-top: 80; /* Add padding for other sections */
+    padding-top: 80;
+    /* Add padding for other sections */
 }
 
 .experience-content {
@@ -276,7 +291,8 @@ body {
 
 /* Projects section styles */
 .projects-section {
-    padding-top: 80; /* Add padding for other sections */
+    padding-top: 80;
+    /* Add padding for other sections */
 }
 
 .projects-grid {
@@ -338,9 +354,11 @@ body {
         --sidebar-width: 35%;
         --content-padding: 60px;
     }
+
     .sidebar {
         left: 10%;
     }
+
     .main-content {
         margin-left: calc(var(--sidebar-width) + 10%);
     }
@@ -351,9 +369,11 @@ body {
         --sidebar-width: 40%;
         --content-padding: 40px;
     }
+
     .sidebar {
         left: 5%;
     }
+
     .main-content {
         margin-left: calc(var(--sidebar-width) + 5%);
     }
@@ -363,7 +383,7 @@ body {
     :root {
         --sidebar-width: 100%;
         --content-padding: 30px;
-        --top-spacing: 40px;
+        --top-spacing: 60px;
     }
 
     .sidebar {
@@ -371,24 +391,50 @@ body {
         position: relative;
         height: auto;
         left: 0;
-        padding: var(--top-spacing) var(--content-padding);
-    }
-    
-    .main-content {
-        margin-left: 0;
-        padding: var(--top-spacing) var(--content-padding);
+        padding: var(--top-spacing) var(--content-padding) 0;
+        align-items: center;
+        /* Center align on mobile */
+        text-align: center;
     }
 
-    .social-links {
+    .sidebar-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sidebar-nav {
+        align-items: center;
         margin-top: 2rem;
     }
 
+    .social-links {
+        align-self: center;
+        justify-content: center;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 2rem var(--content-padding);
+    }
+
+    .section {
+        margin-bottom: 3rem;
+    }
+
     .skills-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     }
 
     .section-title {
         font-size: 1.75rem;
+        text-align: center;
     }
 
     .intro-text {
@@ -400,7 +446,7 @@ body {
     }
 
     .job {
-        padding-left: 0.75rem;
+        padding-left: 1rem;
     }
 
     .job-title {
@@ -419,7 +465,8 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 9999;
+    z-index: -1;
+    /* Place glow behind content so it doesn't affect text visibility */
     mix-blend-mode: soft-light;
 }
 
@@ -490,6 +537,11 @@ body {
     transition: all 0.3s ease;
 }
 
+.projects {
+    margin-left: 0.75rem;
+    /* Shift the whole project cards container slightly to the right */
+}
+
 .project-card h3 {
     color: var(--accent-color);
     font-size: 1.25rem;
@@ -525,4 +577,3 @@ body {
     background-color: rgba(100, 255, 218, 0.05);
     border-color: var(--accent-color);
 }
-  
